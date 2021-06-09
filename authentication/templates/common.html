@@ -32,7 +32,8 @@
 		<!-- nivo slider CSS
 		============================================ -->
 		<link rel="stylesheet" href="{% static 'css/nivo-slider.css' %}" type="text/css" />
-		<link rel="stylesheet" href="{% static 'css/preview.css' %}" type="text/css" media="screen" />
+
+        <link rel="stylesheet" type="text/css" media="screen" />
 		<!-- owl.carousel css -->
         <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
 		<!-- font-awesome css -->
@@ -66,7 +67,8 @@
 								<ul>
                                     {% if user.is_authenticated %}
                                         <li><a href="my-account.html"><i class="fa fa-user"></i>My account</a></li>
-                                        <li><a href="{% url 'Home:Products:Cart:add_to_cart' %}"><i class="fa fa-shopping-cart"></i>My cart</a></li>
+                                     {% comment %} href="{% url 'Home:Products:Cart:add_to_cart' %}" {% endcomment %}
+                                        <li><a ><i class="fa fa-shopping-cart"></i>My cart</a></li>
                                         <li><a href="wishlist.html"><i class="fa fa-heart"></i>My wishlist</a></li>
                                         <li><a href="{% url 'account_logout' %}"><i class="fa fa-lock"></i>Log out</a></li>
                                         <li><a href="{% url 'account_change_password' %}"><i class="fa fa-lock"></i>Change Password</a></li>
